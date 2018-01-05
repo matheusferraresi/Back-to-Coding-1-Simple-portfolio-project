@@ -1,0 +1,367 @@
+@import url('https://fonts.googleapis.com/css?family=Raleway:300,400,700,900');
+
+/* GENERAL
+================= */
+
+* {
+    box-sizing: border-box;
+    transition: all ease-in-out 250ms;
+    margin: 0;
+}
+
+body {
+    font-family: 'Raleway', sans-serif;
+    text-align: center;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+.container {
+    width: 95%;
+    margin: 0 auto;
+}
+
+hr {
+    border-color: #00ff6c;
+}
+
+figure {
+    margin: 0;
+}
+
+.clearfix::after,
+section::after,
+footer::after {
+    content: '';
+    display: block;
+    clear: both;
+}
+
+/* GRID SYSTEM
+================= */
+
+[class^=col-] {
+    width: 100%;
+    padding: 1em;
+}
+
+[class^=col-] { 
+    margin-top: 0;
+}
+
+.col-1 {
+    float: left;
+    width: 33.333334%;
+}
+
+@media (min-width: 50rem) {
+    [class^=col-] {
+        float: left;
+        padding: 0 5em;
+    }
+
+    .col-3 {
+        width: 50%;
+    }
+
+    .col-1 {
+        width: 16.6666%;
+    }
+}
+
+/* TYPOGRAPHY
+================= */
+
+.title {
+    color: white;
+    font-size: 2.5em;
+    margin-bottom: 2em;
+}
+
+.title span {
+    font-weight: 300;
+    display: block;
+    font-size: .75em;
+}
+
+p {
+    line-height: 1.25em;
+}
+
+h2 {
+    font-weight: 500;
+}
+
+@media (min-width: 60rem) {
+    .title {
+        font-size: 3.7rem;
+    }
+}
+
+
+/* BUTTONS */
+
+.button {
+    display: inline-block;
+    font-size: 1.2em;
+    font-weight: 700;
+    text-decoration: none;
+    text-transform: uppercase;
+    border: 2px solid;
+    padding: .5em 1.75em;
+}
+
+.button-primary {
+    color: #00ff6c;
+    border-color: #00ff6c;
+}
+
+.button-primary:hover,
+.button-primary:focus {
+    background: #00ff6c;
+    color: #232323;
+}
+
+.button-small {
+    font-size: 0.7em;
+    font-weight: 800;
+    padding: 0.7em 1.5em;
+}
+
+.button-dark {
+    color: #232323;
+    border-color: #232323;
+}
+
+.button-dark:hover,
+.button-dark:focus {
+    background: #232323;
+    color: #00ff6c;
+}
+
+@media (min-width: 60rem) {}
+
+
+/* HEADER
+================= */
+
+header {
+    position: absolute;
+    left: 0;
+    right: 0;
+    margin: 2em;
+}
+
+nav ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+nav li {
+    display: inline-block;
+    margin: .5em;
+}
+
+nav a {
+    font-weight: 700;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: .8rem;
+    padding: 1em;
+    color: white;
+}
+
+nav a:hover {
+    color: grey;
+}
+
+@media (min-width: 60rem) {
+    .logo {
+        float: left;
+    }
+    nav {
+        float: right;
+    }
+}
+
+
+/* HOME-HERO
+================= */
+
+.home-hero {
+    background: url('../img/hero-bg.jpg') center;
+    background-size: cover;
+    padding: 10em 0;
+}
+
+@media (min-width: 60rem) {
+    .home-hero {
+        height: 100vh;
+        padding-top: 30vh;
+    }
+}
+
+
+/* HOME-ABOUT
+================= */
+
+.about-text-box {
+    position: relative;
+    background-color: #232323;
+    padding: 3em;
+    outline: 2px solid #00ff6c;
+    outline-offset: -2.5em;
+}
+
+.about-text-box h2 {
+    position: absolute;
+    margin-top: -1em;
+    background-color: #232323;
+    left: 50%;
+    transform: translateX(-50%);
+    padding: 0 0.95em;
+    color: #00ff6c;
+}
+
+.about-text-box p {
+    font-size: 0.8em;
+    font-weight: 200;
+    padding: 1em;
+    color: white;
+    margin: 0;
+}
+
+@media (min-width: 30rem) {
+    .about-text-box h2 {
+        font-size: 2em;
+        padding: 0 1em;
+    }
+    .about-text-box p {
+        padding: 1.5em;
+        font-size: 0.9em;
+    }
+}
+
+@media (min-width: 60rem) {
+    .about {
+        background: url('../img/who-we-are.jpg') center no-repeat;
+        padding-bottom: 15em;
+        margin: 0 auto;
+    }
+    .about-text-box h2 {
+        font-size: 2.5em;
+        margin-top: -1.3em;
+        padding: 0 0.8em;
+        transform: translateX(0);
+        left: 1.3em;
+    }
+    .about-text-box p {
+        padding: 1.5em;
+        font-size: 1em;
+    }
+    .about-text-box {
+        width: 40%;
+        text-align: left;
+        padding: 4em;
+        top: -4em;
+        left: 10%;
+        box-shadow: 0 0 4em 0 rgba(0, 0, 0, .6);
+    }
+}
+
+
+/* PORTFOLIO
+================= */
+
+.portfolio {
+    max-width: 112em;
+    margin: 0 auto;
+}
+
+.portfolio hr {
+    width: 5em;
+    margin: 2em auto;
+}
+
+.portfolio h2 {
+    text-transform: uppercase;
+    margin-bottom: 1em;
+    font-size: 2em;
+}
+
+.portfolio img {
+    display: block;
+}
+
+.port-item {
+    position: relative;
+}
+
+.port-desc {
+    color: white;
+    position: absolute;
+    z-index: 100;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    padding: 0.5em;
+    background-color: rgba(0, 0, 0, .6);
+}
+
+.port-desc p {
+    margin: 0 0 0.5em;
+}
+
+@media (min-width: 37rem) {
+    .port-item {
+        width: 50%;
+        float: left;
+    }
+}
+
+@media (min-width: 60rem) {
+    .port-item {
+        width: 33.33334%;
+        overflow: hidden;
+    }
+    .port-desc {
+        font-size: 1.5em;
+        padding: 1em;
+        transform: translateY(150%);
+    }
+    .port-item:hover .port-desc {
+        transform: translateY(0);
+    }
+}
+
+/* CTA
+================= */
+.cta {
+    padding: 5em 0;
+    background: #00ff6c;
+}
+
+.title-cta {
+    margin: 0 0.5em 1em;
+}
+
+/* CTA
+================= */
+footer {
+    background: #232323;
+    color: white;
+    font-size: 0.9em;
+    font-weight: 300;
+    line-height: 1.5em;
+    padding: 5em 1em;
+    text-align: left;
+}
+
+.unstyled-list {
+    list-style: none;
+    padding: 0;
+}
